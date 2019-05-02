@@ -1,6 +1,6 @@
 # Codemymobilesocial
 
-This the frontend part for the task.
+This the frontend part for the task. The login email is codemymobile@gmail.com
 
 ## Backend Connection
 The connection url is available in src/providers/api.service.ts.
