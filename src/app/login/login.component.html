@@ -1,0 +1,14 @@
+<div class="alert alert-danger" role="alert" *ngIf="notallowed">
+  Please enter correct email!
+</div>
+
+<form class="text-center border border-light p-5" [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+  <p class="h4 mb-4">Sign in</p>
+
+  <!-- Email -->
+  <input type="email" id="email" formControlName="email" [class.invalid]="!loginForm.controls.email.valid && blur" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Sign in button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+</form>

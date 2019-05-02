@@ -1,0 +1,15 @@
+<ul class="list-group" *ngFor="let user of users?.data; let i=index;">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    {{user.firstName}} {{user.lastName}}
+
+    <div class="dropdown" mdbDropdown>
+      <button mdbDropdownToggle mdbBtn color="primary" class="dropdown-toggle waves-light" type="button" mdbWavesEffect>
+        Actions
+      </button>
+      <div class="dropdown-menu dropdown-primary">
+        <a class="dropdown-item" (click)="getFriends(i)">Show Friends</a>
+        <a class="dropdown-item" (click)="getFriendsOfFriends(i)">Show Friends of Friends</a>
+      </div>
+    </div>
+  </li>
+</ul>
